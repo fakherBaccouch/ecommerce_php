@@ -188,3 +188,25 @@ font-weight: 500;}
 .footer p{
     margin-left: 10px;
 }
+.product-container{
+     text-align: center;
+    height: 375px;
+    width: 250;
+    border: 1px solid #ddd;
+    margin-left: 40px;
+    padding-left: 0;
+}
+p{
+    text-transform: uppercase;
+    font-size: 14px;
+    color:#8D99AE;
+}
+h3{
+    color: #2B2D42;
+    font-weight: 700;
+}
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    color: #D10024;
+}

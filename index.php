@@ -1,3 +1,4 @@
+<?php include_once("navbar.php")?>
 
           
 <html>
@@ -7,22 +8,7 @@
 		</style>
 	</head>
 	<body>
-	<?php
- echo "first github push";
-		$current = array(
-			"" => "Home",
-			"two" => "Tab2",
-			"three" => "Tab3",
-			"four" => "Tab4"
-		);
-		foreach( $current as $k => $v ) {
-			$active = $_GET['page'] == $k
-				? ' class="active"'
-				: '';
-			echo '<li class="item"><a href="/'. $k .'"'. $active .'>'. $v .'</a></li>';
-		}
-
-	?>
+		lol
 	</body>
 </html>
 
