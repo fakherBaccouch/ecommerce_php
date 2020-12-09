@@ -1,28 +1,29 @@
-<?php include_once("navbar.php")?>
-
-          
-<html>
-	<head>
-		<style>
-			.active { color: red; }
-		</style>
-	</head>
-	<body>
-		lol
-	</body>
-</html>
+<?php  include_once("navbar.php")?>
 
 
 
+<?php include_once("article_list.php")?>
+
+<br>
+<br>
+
+<br>
+
+<br>
+
+<br>
 
 
-
+<br>
 
 
 
 
 
 
+
+
+<?php include("footer.php")?>
 
 
 

@@ -1,5 +1,4 @@
 <?php
-include 'functions.php';
 
 ?>
 
@@ -91,9 +90,9 @@ include 'functions.php';
      </div>
     
  </div>
- <div id="bottom-header">
+ <div  style="position:sticky" id="bottom-header">
      <div class="container">
-     <ul class="main-nav">
+     <ul class="main-nav" >
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#">Hot Deals</a></li>
 						<li><a href="#">Categories</a></li>
