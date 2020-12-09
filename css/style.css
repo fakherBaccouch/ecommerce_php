@@ -5,6 +5,9 @@ Colors:
 	Primary 	: #D10024
 	Dark 		: #15161D ##1E1F29
     Grey 		: #E4E7ED #FBFBFC #8D99AE #B9BABC
+    secondary-white :#eeeeee
+        border: 1px solid rgba(0, 0, 0, .125);
+
  */
  *{
      margin: 0;
@@ -200,7 +203,7 @@ font-weight: 500;}
     height: 400;
     width: 300px;
     border: 1px solid #ddd;
-    margin-left: 40px;
+    margin: 40px;
     padding-left: 0;
     transition: 0.2s;
     position: relative;
@@ -263,4 +266,58 @@ h2{
     font-weight: 700;
     font-size: 18px;
     color: #D10024;
+}
+#panier{
+    height: 100vh;
+    display: flex;
+    padding: 30px;
+    background-color: #eeeeee;
+    
+}
+.right-container{
+    
+    height: 200px;
+    width: 20%;
+ margin: 10px;
+ border: 1px solid rgba(0, 0, 0, .125);
+ background-color: #FFF;
+display:flex;flex-direction:column;justify-content:space-between;
+padding: 10px;
+
+
+}
+.right-container h1 {
+    font-size: 20px;
+}
+.left-container{
+    height: 80vh;
+    width: 80%;
+    margin: 10px;
+    background-color: #FFF;
+        border: 1px solid rgba(0, 0, 0, .125);
+        overflow: scroll;
+
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .button5 {background-color: #15161D;} /* Black */
+.img-panier{
+    width: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-25%);
+}
+table{
+    text-align: center;
 }
