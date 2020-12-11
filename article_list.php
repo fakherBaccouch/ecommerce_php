@@ -4,21 +4,13 @@
 </style>
 <?php
 include 'functions.php';
-// Connect to MySQL database
-$pdo = pdo_connect_mysql();
-// Get the page via GET request (URL param: page), if non exists default the page to 1
-$page = isset($_GET['page']) && is_numeric($_GET['page']) ? (int)$_GET['page'] : 1;
-// Number of records to show on each page
-$records_per_page = 9;
-// Prepare the SQL statement and get records from our contacts table, LIMIT will determine the page
+if(isset($_GET["categorie"]) ){
+  $pdo = pdo_connect_mysql();
 
-$stmt = $pdo->prepare('SELECT * FROM Articles ORDER BY id LIMIT :current_page, :record_per_page');
-$stmt->bindValue(':current_page', ($page-1)*$records_per_page, PDO::PARAM_INT);
-$stmt->bindValue(':record_per_page', $records_per_page, PDO::PARAM_INT);
+$stmt = $pdo->prepare('SELECT * FROM Articles where categorie="'.$_GET["categorie"].'" ORDER BY id ');
+
 $stmt->execute();
-// Fetch the records so we can display them in our template.
 $Articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// Get the total number of contacts, this is so we can determine whether there should be a next and previous c
 $num_contacts = $pdo->query('SELECT COUNT(*) FROM Articles')->fetchColumn();
 ?>
   <div style="display:grid;  grid-template-columns: auto auto auto;
@@ -38,14 +30,11 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM Articles')->fetchColumn();
 </div>
 <?php endforeach; ?>   
 
-<div class="pagination">
-<?php if ($page > 1): ?>
-<a href="read.php?page=<?=$page-1?>"><i class="fas fa-angle-double-left fa-sm"></i>left</a>
-<?php endif; ?>
-<?php if ($page*$records_per_page < $num_contacts): ?>
-<a href="read.php?page=<?=$page+1?>"><i class="fas fa-angle-double-right fa-sm"></i>right</a>
-<?php endif; ?>
+
 </div>
 </div>
 </div>
-</div>
+</div>;
+<?php
+}
+?>

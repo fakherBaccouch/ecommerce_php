@@ -69,7 +69,6 @@ a{
 #main-header{
     background-color:#15161D;
 height: 110px;
-border-bottom: 2.5px solid #D10024;
 display: flex;
 align-items: center;
 }
@@ -139,15 +138,19 @@ button, input, select, textarea {
     border-radius: 0px 40px 40px 0px;
 }
 #bottom-header{
-   
+    border-top: 2.5px solid #D10024;
+    border-bottom: 2.5px solid grey;
+
         background: #FFF;
-        border-bottom: 2px solid #E4E7ED;
       height: 55px;  
       color: #333;  
       display: flex;
+      margin: -5px;
+      z-index: 5;
 }
 .main-nav {
         align-items: center;
+        
 display: flex;}
 .main-nav li a {
     color:#15161D;
@@ -200,9 +203,9 @@ font-weight: 500;}
 }
 .product-container{
      text-align: center;
-    height: 400;
-    width: 300px;
-    border: 1px solid #ddd;
+    height: 375px;
+    width: 275px;
+    border: 2px solid #ddd;
     margin: 40px;
     padding-left: 0;
     transition: 0.2s;
@@ -225,7 +228,7 @@ font-weight: 500;}
 }
   
 .product-container:hover{
-    border: 3px solid #D10024;
+    border: 2px solid #D10024;
 }
 .product-container:hover img {
     opacity: 0.3;
@@ -276,7 +279,7 @@ h2{
 }
 .right-container{
     
-    height: 200px;
+    height: 250px;
     width: 20%;
  margin: 10px;
  border: 1px solid rgba(0, 0, 0, .125);
@@ -295,7 +298,7 @@ padding: 10px;
     margin: 10px;
     background-color: #FFF;
         border: 1px solid rgba(0, 0, 0, .125);
-        overflow: scroll;
+        overflow-y: scroll;
 
 }
 .button {
@@ -320,4 +323,13 @@ padding: 10px;
 }
 table{
     text-align: center;
+}
+table th {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background: #fff;   
+}
+.fa-trash:hover{
+    font-size: 22px;
 }

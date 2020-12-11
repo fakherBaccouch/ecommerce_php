@@ -90,13 +90,15 @@
      </div>
     
  </div>
- <div  style="position:sticky" id="bottom-header">
+
+</header>
+<div  style="position:sticky" id="bottom-header">
      <div class="container">
      <ul class="main-nav" >
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#">Hot Deals</a></li>
-						<li><a href="#">Categories</a></li>
-						<li><a href="#">Laptops</a></li>
+						<li><a href="index.php?categorie=laptop">Laptops</a></li>
+						<li><a href="index.php?categorie=tab">Tablettes</a></li>
 						<li><a href="#">Smartphones</a></li>
 						<li><a href="#">Cameras</a></li>
 						<li><a href="#">Accessories</a></li>
@@ -104,6 +106,5 @@
      </div>
    
      </div>
-</header>
 </body>
 <html>
