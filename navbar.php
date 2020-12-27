@@ -77,13 +77,12 @@
                             </div>
                             
                             <div class="cart-icon">
-                            <a style="display:flex;padding:2px" class="cart-icon-link" >
-										<i style="margin:10px;color:#fff" class="fa fa-shopping-cart"></i>
-                                        <div class="qty">3</div>
+                            <a href="panier.php" style="display:flex;padding:2px" class="cart-icon-link" >
+										<img  style="width:35px"src="./img/shopping-bag.png"></img>	
+                                        <div style="font-size:12px"class="qty">3</div>
                                        
 
 									</a> 
-                                    <span style="color:#fff">Panier</span>
 
                             </div>
                         
@@ -97,11 +96,11 @@
      <ul class="main-nav" >
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#">Hot Deals</a></li>
-						<li><a href="index.php?categorie=laptop">Laptops</a></li>
-						<li><a href="index.php?categorie=tab">Tablettes</a></li>
-						<li><a href="#">Smartphones</a></li>
-						<li><a href="#">Cameras</a></li>
-						<li><a href="#">Accessories</a></li>
+						<li><a href="index.php?categorie=laptop">Laptops</a><i class="fas fa-angle-down"></i></li>
+						<li><a href="index.php?categorie=tab">Tablettes</a><i class="fas fa-angle-down"></i></li>
+						<li><a href="#">Smartphones</a><i class="fas fa-angle-down"></i></li>
+						<li><a href="#">Cameras</a><i class="fas fa-angle-down"></i></li>
+						<li><a href="#">Accessories</a><i class="fas fa-angle-down"></i></li>
 					</ul>
      </div>
    

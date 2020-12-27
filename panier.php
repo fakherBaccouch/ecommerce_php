@@ -38,59 +38,62 @@ foreach ($_SESSION['id'] as $id):
  
    
    endforeach; ?>
-<div id="panier">
+<div style="margin:0 125px" id="panier">
 <div class="left-container">
-    <table style="width:100%">
-    <tr> 
-    <th >Image</th>
-    <th>Libelle</th>
-    <th>Prix</th>
-    <th>Qte</th>
-    <th>Categorie</th>
-    <th>Action</th>
+
+    
 
 
-  </tr>
-  <?php foreach ($_SESSION['id'] as $id): 
+  <ul style="display:flex;flex-direction:column;width:98%">
+  <li>  <div id="item-price" style="font-size:20px;margin:5px">PANIER</div>
+</li>
+<hr class="style-one">
+<?php   
+if(count($_SESSION["id"])> 0){
+ foreach ($_SESSION['id'] as $id): 
   
+    ?>
+    <li  >
+      <div  style="margin-top:20px;height:150px ; display:flex;display:flex;justify-content:space-between"> 
+      <div style="width:25%">
+      <img src=<?php echo $_SESSION['image'][$id]?>>  
+    
+      </div>
+      <div style="width:30%;margin:10px;display:flex;flex-direction:column">
+      <div id="item-description">PC PORTABLE MSI GF75-THIN10SCXR i7 10é Gén 16Go 512Go SSD</div>
+      <div id="item-price">3 725,000 TND</div>
+      </div>
+      <div style="margin:10px;display:flex">
+      <div class="quantity" >
+        <button class="btn minus1">-</button>
+        <input class="quantity" id="id_form-0-quantity" min="0" name="form-0-quantity" value="1" type="number">
+        <button class="btn add1">+</button>
+      </div>
+      <div id="item-price" style="font-size:11px;width:70%">3 725,000 TND</div>
+    
+      </div>
+      <div style="margin:10px">
+      <a href="panier.php?delete=<?php echo $id?>"><i style="cursor:pointer;color:black" class="fas fa-trash"></i></a>  </div>
+      </div>
+    </li>
+    
+    <?php endforeach; 
+} else{
+?>
+<h5 class="no-items">Il n'y a plus d'articles dans votre panier</h5>
+
+<?php
+}
 
 
-  
-  
-  
-  
-  ?>
 
-<tr>
-  <td >  <img class="img-panier" src=<?php echo $_SESSION['image'][$id]?>></td>
-  <td> <?php echo $_SESSION['libelle'][$id]?> </td>
-  <td style="color:red"> $<?php echo $_SESSION['prix'][$id]?> </td>
-  <td> <label for="tentacles"></label>
-
-<input type="number" id="tentacles" name="tentacles"
-       min="10" max="100"> </td>
-  <td> <?php echo $_SESSION['categorie'][$id]?> </td>
-<td>           <i style="cursor:pointer" class="fas fa-trash"><a href="panier.php?delete=<?php echo $id?>">lol</a></i>
-</td>
-  </tr>
-<?php endforeach; ?>
-    </table>
+?>
+</ul>  
 
 </div>
 
      <div class="right-container">
-         <div class="right-container-items">
-             <h1>ORDER SUMMARY</h1>
-             <br>
-             <hr>
-             <br>
-          <div style="display:flex;justify-content:space-between"><h4>ITEMS:</h4> <li style="list-style-type:none"><?php echo count($_SESSION["id"])?></li></div>   
-             <br>
-             <div style="display:flex;justify-content:space-between"><h4>TOTAL:</h4> <li style="list-style-type:none">$<?php echo count($_SESSION["id"])?></li></div>   
-             
-             <button class="button button5">Checkout</button>
-
-         </div>
+         
      </div>
 
 
@@ -117,4 +120,4 @@ foreach ($_SESSION['id'] as $id):
 
 
 
-<?php include("footer.php")?>
+<?php  include("footer.php")?>

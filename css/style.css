@@ -12,13 +12,14 @@ Colors:
  *{
      margin: 0;
      padding: 0;
+     font-family: 'Montserrat', sans-serif;
+
      box-sizing: border-box;
  }
  body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #333;
-
  }
  .logo{
 width: 130px;
@@ -140,7 +141,7 @@ button, input, select, textarea {
 #bottom-header{
     border-top: 2.5px solid #D10024;
     border-bottom: 2.5px solid grey;
-
+font-size: 16px;
         background: #FFF;
       height: 55px;  
       color: #333;  
@@ -154,6 +155,8 @@ button, input, select, textarea {
 display: flex;}
 .main-nav li a {
     color:#15161D;
+    font-size: 14px;
+    height: 50px;
     margin: 10px;
 font-weight: 500;}
 .main-nav li a:hover{
@@ -201,16 +204,29 @@ font-weight: 500;}
 .footer p{
     margin-left: 10px;
 }
+.articles-list{
+    display:grid;  grid-template-columns: auto auto auto;
+    margin: 20px 145px;
+    
+}
 .product-container{
      text-align: center;
-    height: 375px;
+    height: 400px;
     width: 275px;
     border: 2px solid #ddd;
     margin: 40px;
-    padding-left: 0;
-    transition: 0.2s;
+padding: 20px;    transition: 0.2s;
     position: relative;
-
+    
+}
+.product-container img{
+    height: 70%;
+}
+.product-container-content{
+    height: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .text {
     position: relative;
@@ -225,6 +241,7 @@ font-weight: 500;}
     border-radius: 40px;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
+
 }
   
 .product-container:hover{
@@ -271,34 +288,35 @@ h2{
     color: #D10024;
 }
 #panier{
-    height: 100vh;
+    height: fit-content;
     display: flex;
     padding: 30px;
-    background-color: #eeeeee;
+    
     
 }
 .right-container{
     
     height: 250px;
-    width: 20%;
- margin: 10px;
+    width: 35%; 
+ margin: 0 20px;
  border: 1px solid rgba(0, 0, 0, .125);
  background-color: #FFF;
 display:flex;flex-direction:column;justify-content:space-between;
 padding: 10px;
-
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 }
 .right-container h1 {
     font-size: 20px;
 }
 .left-container{
-    height: 80vh;
-    width: 80%;
-    margin: 10px;
+    height: fit-content;
+    
+    width: 65%;
+    margin: 0 20px;
+
     background-color: #FFF;
         border: 1px solid rgba(0, 0, 0, .125);
-        overflow-y: scroll;
 
 }
 .button {
@@ -333,3 +351,71 @@ table th {
 .fa-trash:hover{
     font-size: 22px;
 }
+.empty-container p{
+    text-align: center;
+    position: relative;
+    top:10px;
+}
+#item-description{
+    padding: 0;
+    line-height: inherit;
+    text-align: left;
+    white-space: inherit;
+    color: #0363cd;
+    font-size: .820rem;
+    font-weight: 450;
+    margin: 5px;
+
+}
+#item-price{
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #242424;
+    font-size: 1rem;
+
+    margin: 5px;
+}
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.quantity{
+    display:flex;
+    width:160px;
+ }
+ 
+ /* it will support chrome and firefox */
+ .quantity input[type=number]::-webkit-inner-spin-button,
+ .quantity input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance:none;
+ }
+ 
+ .quantity input,.quantity button{
+    width:20px;
+    padding:.5em;
+    font-size:1rem;
+    text-align:center;
+    font-weight:500;
+    background:white;
+    border:1px solid #aaa;
+    height:40px;
+ }
+ 
+ .quantity input{
+    border-left:none;
+    border-right:none;
+    width: 30px;
+ }
+ .no-items{
+    margin: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+ }
