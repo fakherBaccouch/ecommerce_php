@@ -49,7 +49,7 @@ foreach ($_SESSION['id'] as $id):
 </li>
 <hr class="style-one">
 <?php   
-if(count($_SESSION["id"])> 0){
+if(isset($_SESSION["id"]) && count($_SESSION["id"])> 0){
  foreach ($_SESSION['id'] as $id): 
   
     ?>

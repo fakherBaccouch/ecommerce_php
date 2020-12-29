@@ -1,8 +1,10 @@
-<?php ?>
+<?php ;
+ ?>
 <style>
 <?php include 'css/style.css'; ?>
 </style>
 <?php
+var_dump($_SERVER);
 include 'functions.php';
 if(isset($_GET["categorie"]) ){
   $pdo = pdo_connect_mysql();

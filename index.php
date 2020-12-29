@@ -4,17 +4,7 @@
 
 <?php include_once("article_list.php")?>
 
-<br>
-<br>
 
-<br>
-
-<br>
-
-<br>
-
-
-<br>
 
 
 
