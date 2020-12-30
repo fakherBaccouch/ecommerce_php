@@ -30,10 +30,48 @@
     </head>
 
     <body>
-       <div id="description-container">
+    <?php  include_once("navbar.php");?>
 
+       <div    id="description-container">
+                <div style="margin:20px 160px;height:90vh;display:flex;justify-content:space-around">
+               <div id="description-image"><img src="./img/mouse1.png"></div>
+               <div id="description-description">
+                  <h3 style="font-size:150%">RAZZER GOLIATHUS</h3>
+                  <br>
+                  <p style="font-size:70%;font-weight:500">Référence: RD-M602-1 </p>
+                  <br>
+                  
+
+                  <h2 style="font-size:150%;">39,000 TND</h2>
+                  <br>
+                  
+
+                  <span style="border-bottom:2px solid #f0f0f0;width:30%;font-size:16px;font-weight:550; display: flex;
+   flex-direction: row;
+   justify-content: space-between;line-height:50px">800/1200/1600/2400 /
+                       7200DPI Taux d'interrogation 
+                       1000HZ Patins</span>
+                       <br>
+
+
+<div style="display:flex;justify-content:space-arround">
+<div class="quantity" >
+        <button class="btn minus1">-</button>
+        <input class="quantity" id="id_form-0-quantity" min="0" name="form-0-quantity" value="1" type="number">
+        <button class="btn add1">+</button>
+      </div>
+<button type="submit" style="background:#D10024;margin:0;margin-left:-100px;width:250px;height:50px"   class="button button3">Ajouter au panier</button>
+
+</div>
+
+               </div>
+
+
+
+                </div>
 
        </div>
+       <?php include("footer.php")?>
 
 
 

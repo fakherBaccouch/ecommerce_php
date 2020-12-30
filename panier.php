@@ -61,7 +61,7 @@ if(isset($_SESSION["id"]) && count($_SESSION["id"])> 0){
       </div>
       <div style="width:30%;margin:10px;display:flex;flex-direction:column">
       <div id="item-description">PC PORTABLE MSI GF75-THIN10SCXR i7 10é Gén 16Go 512Go SSD</div>
-      <div id="item-price">3 725,000 TND</div>
+      <div id="item-price"><?php echo $_SESSION['prix'][$id]?>TND</div>
       </div>
       <div style="margin:10px;display:flex">
       <div class="quantity" >
@@ -69,7 +69,7 @@ if(isset($_SESSION["id"]) && count($_SESSION["id"])> 0){
         <input class="quantity" id="id_form-0-quantity" min="0" name="form-0-quantity" value="1" type="number">
         <button class="btn add1">+</button>
       </div>
-      <div id="item-price" style="font-size:11px;width:70%">3 725,000 TND</div>
+      <div id="item-price" style="font-size:11px;width:70%"><?php echo $_SESSION['prix'][$id]?>,000 TND</div>
     
       </div>
       <div style="margin:10px">
@@ -92,8 +92,30 @@ if(isset($_SESSION["id"]) && count($_SESSION["id"])> 0){
 
 </div>
 
-     <div class="right-container">
-         
+     <div style="padding:0" class="right-container">
+     <div style="width:100%">
+
+     <div  style="padding:10px" class="panier_text"> 
+           <span>2 Articles</span>
+           <span>6870,00DT</span>
+         </div>
+     </div>
+
+     <div style="width:100%">
+
+<div  style="padding:10px" class="panier_text"> 
+      <span>Total TTC</span>
+      <span>6870,00DT</span>
+    </div>
+</div>
+<div style="width:100%">
+
+<button type="submit" style="background:#D10024"   class="button button3">Checkout</button>
+
+</div>
+
+        
+        
      </div>
 
 

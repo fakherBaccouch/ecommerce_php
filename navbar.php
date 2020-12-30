@@ -1,6 +1,9 @@
 <?php
+include("config.php");
 
 ?>
+
+
 
 <!DOCTYPE html>
 
@@ -93,17 +96,43 @@
 </header>
 <div  style="position:sticky" id="bottom-header">
      <div class="container">
-     <ul class="main-nav" >
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Hot Deals</a></li>
-						<li><a href="index.php?categorie=laptop">Laptops</a><i class="fas fa-angle-down"></i></li>
-						<li><a href="index.php?categorie=tab">Tablettes</a><i class="fas fa-angle-down"></i></li>
-						<li><a href="#">Smartphones</a><i class="fas fa-angle-down"></i></li>
-						<li><a href="#">Cameras</a><i class="fas fa-angle-down"></i></li>
-						<li><a href="#">Accessories</a><i class="fas fa-angle-down"></i></li>
-					</ul>
+    
+					<ul class="main-nav">
+	  <li   class="nav-item">
+	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "laptop") {?>active<?php }?>" href="article_list.php?categorie=laptop">Laptop</a>
+	  </li>
+	  <li   class="nav-item">
+	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "tab") {?>active<?php }?>" href="article_list.php?categorie=tab">tablette</a>
+	  </li>
+	  <li   class="nav-item">
+	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "souris") {?>active<?php }?>" href="article_list.php?categorie=souris">Souris</a>
+	  </li>
+	</ul>
      </div>
    
      </div>
 </body>
 <html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,8 +3,7 @@
 <style>
 <?php include 'css/style.css'; ?>
 </style>
-<?php
-var_dump($_SERVER);
+<?php  include_once("navbar.php");
 include 'functions.php';
 if(isset($_GET["categorie"]) ){
   $pdo = pdo_connect_mysql();
@@ -46,4 +45,5 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM Articles')->fetchColumn();
 </div>;
 <?php
 }
-?>
+ include("footer.php")?>
+
