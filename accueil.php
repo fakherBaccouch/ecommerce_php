@@ -5,10 +5,10 @@
 </style>
 <?php  include_once("navbar.php");
 include 'functions.php';
-if(isset($_GET["categorie"]) ){
+
   $pdo = pdo_connect_mysql();
  
-$stmt = $pdo->prepare('SELECT * FROM Articles where categorie="'.$_GET["categorie"].'" ORDER BY id ');
+$stmt = $pdo->prepare('SELECT * FROM Articles where promo>0 ORDER BY id  LIMIT 0, 10');
 
 $stmt->execute();
 $Articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -17,7 +17,9 @@ $Articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php foreach ($Articles as $Article): ?>
  
 <div class="product-container">
-<img style="width:100%" src="<?php echo $Article['image']?>">
+<div><img style="position:absolute;right:0px;width:100px;top:0%;height:100px"src="img/promo.png" ></div>
+
+<img  src="<?php echo $Article['image']?>">
 
   <div class="product-container-content">
   <p> <?php echo $Article['categorie']?></p>
@@ -32,7 +34,7 @@ $Articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   </div>
   <div class="middle">
-<div class="text"> <a href='panier.php?id=<?=$Article['id']?>&libelle="<?=$Article['libelle']?>"&image="<?=$Article['image']?>"&prix=<?=$Article['prix']?>&categorie="<?=$Article['categorie']?>"&promo=<?=$Article['promo']?>&description=<?=$Article['description']?>'>Ajouter au panier</a></div>
+<div class="text"><a href='panier.php?id=<?=$Article['id']?>&libelle="<?=$Article['libelle']?>"&image="<?=$Article['image']?>"&prix=<?=$Article['prix']?>&categorie="<?=$Article['categorie']?>"&promo=<?=$Article['promo']?>&description=<?=$Article['description']?>'>Ajouter au panier</a></div>
 </div>
 </div>
 <?php endforeach; ?>   
@@ -43,6 +45,5 @@ $Articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </div>
 </div>;
 <?php
-}
- include("footer.php")?>
 
+ include("footer.php")?>

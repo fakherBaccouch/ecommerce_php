@@ -14,6 +14,11 @@ $CURRENT_PAGE = "tab";
     $CURRENT_PAGE = "souris"; 
                 $PAGE_TITLE = "article_list";
      }
+     else if(isset($_SERVER["REQUEST_URI"]) && $_SERVER["REQUEST_URI"]=="/accueil.php"){
+
+      $CURRENT_PAGE = "acceuil"; 
+                  $PAGE_TITLE = "article_list";
+       }
 
 
 

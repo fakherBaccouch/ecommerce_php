@@ -39,7 +39,6 @@ include("config.php");
     </head>
 <body>
 <header>
-
 <div id="top-header" >
 				<div class="container">
 					<ul >
@@ -48,7 +47,9 @@ include("config.php");
 						<li><a href="#"><i class="fa fa-map-marker"></i> FAKHERTEK</a></li>
 					</ul>
 					<ul >
-						<li><a href="login.php"><i class="fa fa-user-lock"></i>    Signin</a></li>
+					<?php if(isset($_SESSION["username"]) ){echo '<li><a href="logout.php"><i class="fa fa-user-lock"></i> Deconnection</a></li>';}else{
+						echo '<li><a href="login.php"><i class="fa fa-user-lock"></i>connection</a></li>';
+					} ?>;
 					</ul>
 				</div>
 
@@ -61,28 +62,18 @@ include("config.php");
    
 							
 <div>
-<a>  <img class="logo" src="./img/brand1.png" alt=""></a> 
+<a>  <img class="logo" src="img/brand1.png" alt=""></a> 
 
 </div>
 						
                         <div>
-								<div class="header-search">
-									<form>
-										<select class="input-select">
-											<option value="0">All Categories</option>
-											<option value="1">Category 01</option>
-											<option value="1">Category 02</option>
-										</select>
-										<input class="input" placeholder="Search here">
-										<button class="search-btn">Search</button>
-									</form>
-								</div>
+								
                             </div>
                             
                             <div class="cart-icon">
                             <a href="panier.php" style="display:flex;padding:2px" class="cart-icon-link" >
 										<img  style="width:35px"src="./img/shopping-bag.png"></img>	
-                                        <div style="font-size:12px"class="qty">3</div>
+                                        <div style="font-size:12px"class="qty"></div>
                                        
 
 									</a> 
@@ -98,14 +89,17 @@ include("config.php");
      <div class="container">
     
 					<ul class="main-nav">
-	  <li   class="nav-item">
-	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "laptop") {?>active<?php }?>" href="article_list.php?categorie=laptop">Laptop</a>
+					<li   class="nav-item">
+	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "acceuil") {?>active<?php }?>" href="accueil.php">ACCUEIL</a>
 	  </li>
 	  <li   class="nav-item">
-	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "tab") {?>active<?php }?>" href="article_list.php?categorie=tab">tablette</a>
+	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "laptop") {?>active<?php }?>" href="article_list.php?categorie=laptop">LAPTOPS</a>
 	  </li>
 	  <li   class="nav-item">
-	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "souris") {?>active<?php }?>" href="article_list.php?categorie=souris">Souris</a>
+	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "tab") {?>active<?php }?>" href="article_list.php?categorie=tab">TABLETTES</a>
+	  </li>
+	  <li   class="nav-item">
+	    <a style="font-size:20px" class=" <?php if ($CURRENT_PAGE == "souris") {?>active<?php }?>" href="article_list.php?categorie=souris">SOURIS</a>
 	  </li>
 	</ul>
      </div>

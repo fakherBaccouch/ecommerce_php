@@ -19,6 +19,7 @@ body{
    font-family: 'Montserrat', sans-serif;
    font-weight: 400;
    color: #333;
+   overflow-x: hidden;
 }
 .logo{
 width: 130px;
@@ -150,7 +151,7 @@ font-size: 16px;
 }
 .main-nav {
        align-items: center;
-       
+       margin: AUTO;
 display: flex;}
 
 .main-nav li a {
@@ -348,6 +349,7 @@ table th {
 }
 .fa-trash:hover{
    font-size: 22px;
+   color:red;
 }
 .empty-container p{
    text-align: center;
@@ -440,7 +442,6 @@ hr.style-one {
 #description-image{
     height: 80%;
     position: relative;
-background:#f0f0f0;
 }
 #description-image img{
   position: absolute;
@@ -450,4 +451,11 @@ background:#f0f0f0;
     height: 60%;
     width: 50%;
 } 
+
+#admin_table td {
+   width:100px;
+   text-align:left; 
+   
+}
+
 
